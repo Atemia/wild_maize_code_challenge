@@ -1,0 +1,1 @@
+Samples in the second sub-population displayed high admixture. This might imply that within this sub-population, individuals inherited fractions of their genome from sub-populations 1 and 2. Also, the altitude does not seem to influence the population structure of maize as the clustering pattern did not correspond to it.
