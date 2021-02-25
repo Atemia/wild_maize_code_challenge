@@ -7,9 +7,9 @@ Download any two Nostoc bacterial genomes ​from NCBI​, use one complete geno
 * Rebuilding virtual env, activate the conda environment for reproducibility (Functions are not exported by default to be made available in subshells therefore has to be done outside this script)
 
 * Within this directoty, run the following commands to replicate and activate my virtual environment. 
-    `conda env create -n blast -f blast.yml`
+> `conda env create -n blast -f blast.yml`
 
-    `source activate blast`
+> `source activate blast`
 
 
 > Answers 
