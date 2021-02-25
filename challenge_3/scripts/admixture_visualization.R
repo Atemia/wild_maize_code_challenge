@@ -56,7 +56,7 @@ p1 <- plotQ(qlist[1],exportplot=T,returnplot=T, showyaxis=T, showgrplab = F,
             subtitlesize = 12, showlegend=T,legendkeysize=8,legendtextsize=10,
             legendlab=c("Cluster 1", "Cluster 2","Cluster 3"), indlabsize = 4,
             imgtype = "pdf",
-            exportpath= "../results"
+            exportpath= "../results",
             outputfilename = "../results/admixture_plot",
             height = 4,
             width = 8,
@@ -92,7 +92,7 @@ p <- plotQMultiline(qlist,exportplot=T,returnplot=T, spl = 55, showyaxis=T,
                     subtitlesize = 12, showlegend=T,legendkeysize=8,legendtextsize=10,
                     legendlab=c("Cluster 1", "Cluster 2","Cluster 3"), indlabsize = 7,
                     imgtype = "pdf", # plotting
-                    exportpath= "../results"
+                    exportpath= "../results",
                     outputfilename = "../results/multiline_admixture_plot",
                     height = 10,
                     width = 8,
