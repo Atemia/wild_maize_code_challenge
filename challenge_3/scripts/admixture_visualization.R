@@ -1,14 +1,21 @@
 #!/usr/bin/env R
 
 # Installation of packages
-list.of.packages <- c("gridExtra","gtable","label.switching","ggplot2","pophelper")
+print("Checking and installing required packages...")
+
+list.of.packages <- c("gridExtra","gtable","label.switching","ggplot2","tidyr","devtools")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) install.packages(new.packages)
+if(length(new.packages)) install.packages(new.packages, repos = "https://www.stats.bris.ac.uk/R/", dependencies=T)
+
+print(Installing pophelper package from github ...)
+print(This might take a while...)
+
+library(devtools)
+devtools::install_github('royfrancis/pophelper')
+
+print(Done !)
 
 # install.packages(c("devtools","ggplot2","gridExtra","gtable","label.switching","tidyr"),dependencies=T)
-# 
-# ## **install pophelper package from CRAN**
-# install.packages('pophelper')
 
 ## **install pophelper package from GitHub**
 # library(devtools)
