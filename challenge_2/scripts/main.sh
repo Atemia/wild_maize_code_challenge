@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Rebuilding virtual env, activate the conda environment for reproducibility
-conda env create -n blast -f blast.yml; conda activate blast 
+# Rebuilding virtual env, activate the conda environment for reproducibility (Functions are not exported by default to be made available in subshells therefore has to be done outside this script)
+# conda env create -n blast -f blast.yml
+# source activate blast
 
 # Data retrival
 bash getData.sh

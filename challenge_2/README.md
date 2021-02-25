@@ -2,6 +2,16 @@
 > Task
 Download any two Nostoc bacterial genomes ​from NCBI​, use one complete genome (the “reference”) and of the other only a small fraction e.g. one hundred genes (the “subject”). Write a simple pipeline that identifies the RBH for the “subject” genes.
 
+> To esnsure reprodicibility conda was used.
+
+* Rebuilding virtual env, activate the conda environment for reproducibility (Functions are not exported by default to be made available in subshells therefore has to be done outside this script)
+
+* Within this directoty, run the following commands to replicate and activate my virtual environment. 
+    `conda env create -n blast -f blast.yml`
+
+    `source activate blast`
+
+
 > Answers 
 - Navigate to the script directory `cd scripts`
 - Run `chmod +x *.sh ; bash main.sh` to activate clone the virtual environment containing all software and perform the analysis
