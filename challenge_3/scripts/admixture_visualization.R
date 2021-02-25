@@ -1,3 +1,10 @@
+#!/usr/bin/env R
+
+# Installation of packages
+list.of.packages <- c("gridExtra","gtable","label.switching","ggplot2","pophelper")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
 # install.packages(c("devtools","ggplot2","gridExtra","gtable","label.switching","tidyr"),dependencies=T)
 # 
 # ## **install pophelper package from CRAN**
@@ -7,7 +14,6 @@
 # library(devtools)
 # devtools::install_github('royfrancis/pophelper')
 
-
 library("pophelper")
 library("gridExtra")
 library("gtable")
@@ -15,8 +21,6 @@ library("label.switching")
 library("tidyr")
 library("ggplot2")
 
-# set working dir
-setwd("~/Documents/code_challenges/challenge_3/scripts/")
 
 # import metadata files
 meta_data <- read.delim("../data/maize_samples.txt", header=T, stringsAsFactors=F)
@@ -53,6 +57,8 @@ p1 <- plotQ(qlist[1],exportplot=T,returnplot=T, showyaxis=T, showgrplab = F,
             units = "inches",
             theme = "theme_grey") # labeling the sub populations
 
+# Visualizing the plot using a different method
+
 # p1$plot[[1]]
 # grid.arrange(p1$plot[[1]])
 
@@ -79,13 +85,14 @@ p <- plotQMultiline(qlist,exportplot=T,returnplot=T, spl = 55, showyaxis=T,
                     subtitlesize = 12, showlegend=T,legendkeysize=8,legendtextsize=10,
                     legendlab=c("Cluster 1", "Cluster 2","Cluster 3"), indlabsize = 7,
                     imgtype = "pdf", # plotting
-                    outputfilename = "../results/multiline_admixture_plot.pdf",
+                    outputfilename = "../results/multiline_admixture_plot",
                     height = 10,
                     width = 8,
                     dpi = 300,
                     units = "in",
                     theme = "theme_grey") # labeling the sub populations
 
+# Visualizing the plot using a different method
 # grid.arrange(p$plot[[1]][[1]]) # plotting the Multiline Plot
 
 # # Exporting file to pdf
@@ -99,5 +106,4 @@ p <- plotQMultiline(qlist,exportplot=T,returnplot=T, spl = 55, showyaxis=T,
 # grid.arrange(p$plot[[1]][[1]])
 # 
 # # Closing the graphical device
-# dev.off() 
-
+# dev.off()
