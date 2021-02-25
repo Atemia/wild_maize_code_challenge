@@ -5,15 +5,14 @@ print("Checking and installing required packages...")
 
 list.of.packages <- c("gridExtra","gtable","label.switching","ggplot2","tidyr","devtools")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-if(length(new.packages)) install.packages(new.packages, repos = "https://www.stats.bris.ac.uk/R/", dependencies=T)
+if(length(new.packages)) install.packages(new.packages, repos = "https://www.stats.bris.ac.uk/R/")
 
-print(Installing pophelper package from github ...)
-print(This might take a while...)
+print("Installing pophelper package from github ...")
+print("This might take a while...")
 
-library(devtools)
 devtools::install_github('royfrancis/pophelper')
 
-print(Done !)
+print("Done !")
 
 # install.packages(c("devtools","ggplot2","gridExtra","gtable","label.switching","tidyr"),dependencies=T)
 
@@ -57,6 +56,7 @@ p1 <- plotQ(qlist[1],exportplot=T,returnplot=T, showyaxis=T, showgrplab = F,
             subtitlesize = 12, showlegend=T,legendkeysize=8,legendtextsize=10,
             legendlab=c("Cluster 1", "Cluster 2","Cluster 3"), indlabsize = 4,
             imgtype = "pdf",
+            exportpath= "../results"
             outputfilename = "../results/admixture_plot",
             height = 4,
             width = 8,
@@ -92,6 +92,7 @@ p <- plotQMultiline(qlist,exportplot=T,returnplot=T, spl = 55, showyaxis=T,
                     subtitlesize = 12, showlegend=T,legendkeysize=8,legendtextsize=10,
                     legendlab=c("Cluster 1", "Cluster 2","Cluster 3"), indlabsize = 7,
                     imgtype = "pdf", # plotting
+                    exportpath= "../results"
                     outputfilename = "../results/multiline_admixture_plot",
                     height = 10,
                     width = 8,
